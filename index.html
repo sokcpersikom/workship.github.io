@@ -3,89 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Музыкальное служение</title>
+<title>WORKSHIP</title>
 
 <style>
 
+*{
+    box-sizing:border-box;
+}
+
 body{
+
     margin:0;
-    padding:40px;
-    background:#f2f0eb;
+    min-height:100vh;
+
     font-family:Arial,sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35), transparent 40%),
+        radial-gradient(circle at 80% 40%, rgba(255,255,255,0.25), transparent 40%),
+        linear-gradient(#f4efe8,#ece5dc);
+
+    padding:40px;
+
+    overflow-x:hidden;
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,0.012),
+            rgba(0,0,0,0.012) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    pointer-events:none;
 }
 
 h1{
+
     text-align:center;
-    margin-bottom:60px;
+
+    margin:0 0 70px;
+
+    font-size:58px;
+
+    letter-spacing:10px;
+
+    color:#111;
+
+    font-weight:700;
 }
 
 .folders{
-    max-width:900px;
+
+    width:min(1400px,95vw);
+
     margin:auto;
+
+    position:relative;
 }
 
 .folder-link{
+
     text-decoration:none;
+
+    display:block;
 }
 
 .folder{
-    width:420px;
-    height:120px;
-    background:#e8ddd1;
-    border-radius:12px;
-    margin-bottom:-35px;
+
     position:relative;
+
+    width:88%;
+
+    height:145px;
+
+    border-radius:14px;
+
+    margin-bottom:-65px;
+
     transition:all .25s ease;
-}
 
-.folder:nth-child(1){
-    margin-left:0;
-}
-
-.folder-link:nth-child(2) .folder{
-    background:#f0d6d6;
-    margin-left:150px;
-}
-
-.folder-link:nth-child(3) .folder{
-    background:#dcd6cf;
-}
-
-.folder-link:nth-child(4) .folder{
-    background:#f2d3b3;
-    margin-left:120px;
-}
-
-.folder-link:nth-child(5) .folder{
-    background:#d9e2ef;
-}
-
-.folder-tab{
-    position:absolute;
-    top:-28px;
-    left:40px;
-    width:180px;
-    height:45px;
-    background:inherit;
-    border-radius:10px 10px 0 0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:22px;
-    color:black;
+    box-shadow:
+        0 18px 30px rgba(0,0,0,.08),
+        0 6px 10px rgba(0,0,0,.06);
 }
 
 .folder:hover{
-    transform:translateY(-15px);
+
+    transform:translateY(-18px);
+
+    box-shadow:
+        0 30px 50px rgba(0,0,0,.14),
+        0 12px 18px rgba(0,0,0,.08);
+
+    z-index:999;
+}
+
+.folder-tab{
+
+    position:absolute;
+
+    top:-34px;
+
+    left:60px;
+
+    width:240px;
+
+    height:60px;
+
+    background:inherit;
+
+    border-radius:18px 18px 0 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#111;
+}
+
+/* О НАС */
+
+.folder-link:nth-child(1) .folder{
+
+    background:#e8e1d8;
+
+    margin-left:0;
+
+    z-index:5;
+}
+
+/* ЦЕРКОВЬ */
+
+.folder-link:nth-child(2) .folder{
+
+    background:#ecd8dc;
+
+    margin-left:12%;
+
+    z-index:4;
+}
+
+/* СЛУЖЕНИЯ */
+
+.folder-link:nth-child(3) .folder{
+
+    background:#dfdad3;
+
+    margin-left:4%;
+
+    z-index:3;
+}
+
+/* АРХИВ ПЕСЕН */
+
+.folder-link:nth-child(4) .folder{
+
+    background:#efd2b6;
+
+    margin-left:18%;
+
+    z-index:2;
+}
+
+/* СОЦСЕТИ */
+
+.folder-link:nth-child(5) .folder{
+
+    background:#d9e2ec;
+
+    margin-left:8%;
+
+    z-index:1;
+}
+
+@media(max-width:900px){
+
+    h1{
+        font-size:38px;
+        letter-spacing:4px;
+    }
+
+    .folder{
+
+        width:96%;
+
+        height:110px;
+    }
+
+    .folder-tab{
+
+        width:170px;
+
+        height:45px;
+
+        font-size:18px;
+
+        left:25px;
+    }
+
 }
 
 </style>
-
 </head>
+
 <body>
 
-<h1>Музыкальное служение</h1>
+<h1>WORKSHIP</h1>
 
 <div class="folders">
 
