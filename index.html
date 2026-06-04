@@ -1,136 +1,123 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Музыкальный архив</title>
+<title>Музыкальное служение</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 30px;
+
+body{
+    margin:0;
+    padding:40px;
+    background:#f2f0eb;
+    font-family:Arial,sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+h1{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.library {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
+.folders{
+    max-width:900px;
+    margin:auto;
 }
 
-.song {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
+.folder-link{
+    text-decoration:none;
 }
 
-.song-header {
-    background: #4a6fa5;
-    color: white;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
+.folder{
+    width:420px;
+    height:120px;
+    background:#e8ddd1;
+    border-radius:12px;
+    margin-bottom:-35px;
+    position:relative;
+    transition:all .25s ease;
 }
 
-.files {
-    padding: 15px;
+.folder:nth-child(1){
+    margin-left:0;
 }
 
-.files a {
-    display: block;
-    text-decoration: none;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 8px;
-    background: #eef3f8;
-    color: #333;
-    transition: 0.2s;
+.folder-link:nth-child(2) .folder{
+    background:#f0d6d6;
+    margin-left:150px;
 }
 
-.files a:hover {
-    background: #dbe7f5;
+.folder-link:nth-child(3) .folder{
+    background:#dcd6cf;
 }
 
-details {
-    margin-top: 10px;
+.folder-link:nth-child(4) .folder{
+    background:#f2d3b3;
+    margin-left:120px;
 }
 
-summary {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    background: #eef3f8;
+.folder-link:nth-child(5) .folder{
+    background:#d9e2ef;
 }
 
-summary:hover {
-    background: #dbe7f5;
+.folder-tab{
+    position:absolute;
+    top:-28px;
+    left:40px;
+    width:180px;
+    height:45px;
+    background:inherit;
+    border-radius:10px 10px 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:22px;
+    color:black;
 }
+
+.folder:hover{
+    transform:translateY(-15px);
+}
+
 </style>
 
 </head>
-
 <body>
 
-<h1>🎵 Архив песен группы</h1>
+<h1>Музыкальное служение</h1>
 
-<div class="library">
+<div class="folders">
 
-```
-<div class="song">
-    <div class="song-header">Тестовая песня</div>
-
-    <div class="files">
-
-        <a href="https://disk.yandex.ru/i/UcX92G5_QP1IRg" target="_blank">
-            🎸 Аккорды
-        </a>
-
-        <a href="https://disk.yandex.ru/i/UcX92G5_QP1IRg" target="_blank">
-            🎼 Ноты
-        </a>
-
-        <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
-            🎧 Аудиозапись
-        </a>
-
-        <details>
-            <summary>🎤 Партии голосов</summary>
-
-            <div style="margin-top:10px;">
-
-                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
-                    Сопрано
-                </a>
-
-                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
-                    Альт
-                </a>
-
-                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
-                    Тенор
-                </a>
-
-                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
-                    Бас
-                </a>
-
-            </div>
-        </details>
-
+<a class="folder-link" href="about.html">
+    <div class="folder">
+        <div class="folder-tab">О НАС</div>
     </div>
-</div>
-```
+</a>
+
+<a class="folder-link" href="church.html">
+    <div class="folder">
+        <div class="folder-tab">ЦЕРКОВЬ</div>
+    </div>
+</a>
+
+<a class="folder-link" href="services.html">
+    <div class="folder">
+        <div class="folder-tab">СЛУЖЕНИЯ</div>
+    </div>
+</a>
+
+<a class="folder-link" href="songs.html">
+    <div class="folder">
+        <div class="folder-tab">АРХИВ ПЕСЕН</div>
+    </div>
+</a>
+
+<a class="folder-link" href="social.html">
+    <div class="folder">
+        <div class="folder-tab">СОЦСЕТИ</div>
+    </div>
+</a>
 
 </div>
 
