@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -16,13 +17,14 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 30px;
 }
 
 .library {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
 }
 
@@ -59,7 +61,23 @@ h1 {
 .files a:hover {
     background: #dbe7f5;
 }
+
+details {
+    margin-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background: #eef3f8;
+}
+
+summary:hover {
+    background: #dbe7f5;
+}
 </style>
+
 </head>
 
 <body>
@@ -68,27 +86,51 @@ h1 {
 
 <div class="library">
 
-    <div class="song">
-        <div class="song-header">Великий Бог</div>
+```
+<div class="song">
+    <div class="song-header">Тестовая песня</div>
 
-        <div class="files">
-            <a href="#">🎸 Аккорды</a>
-            <a href="#">🎼 Ноты</a>
-            <a href="#">🎧 Демозапись</a>
-            <a href="#">🎤 Партии голосов</a>
-        </div>
+    <div class="files">
+
+        <a href="https://disk.yandex.ru/i/UcX92G5_QP1IRg" target="_blank">
+            🎸 Аккорды
+        </a>
+
+        <a href="https://disk.yandex.ru/i/UcX92G5_QP1IRg" target="_blank">
+            🎼 Ноты
+        </a>
+
+        <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
+            🎧 Аудиозапись
+        </a>
+
+        <details>
+            <summary>🎤 Партии голосов</summary>
+
+            <div style="margin-top:10px;">
+
+                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
+                    Сопрано
+                </a>
+
+                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
+                    Альт
+                </a>
+
+                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
+                    Тенор
+                </a>
+
+                <a href="https://disk.yandex.ru/d/xhyftUGfFPB2pw" target="_blank">
+                    Бас
+                </a>
+
+            </div>
+        </details>
+
     </div>
-
-    <div class="song">
-        <div class="song-header">Ты достоин славы</div>
-
-        <div class="files">
-            <a href="#">🎸 Аккорды</a>
-            <a href="#">🎼 Ноты</a>
-            <a href="#">🎧 Демозапись</a>
-            <a href="#">🎤 Партии голосов</a>
-        </div>
-    </div>
+</div>
+```
 
 </div>
 
